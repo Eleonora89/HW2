@@ -91,7 +91,8 @@ git push
 
  27. Отредактировать содержание файла “new.xml” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате XML.
 1)  Vim new.xml 
-2) <person>
+2) <?xml version="8.0" encoding="windows-1251"?>
+<person>
  <name>Eleonora</name>                                                           
  <surname>Terenteva</surname>                                                        
  <age>32</age>                                                                     
@@ -107,7 +108,8 @@ git add .   ->   git commit -m "added information xml" -> git push
 touch preferences.xml
  30. В файл preferences.xml добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате XML.
 1) vim  preferences.xml
-2) <Hobbies> 
+2) <?xml version="8.0" encoding="windows-1251"?>
+<Hobbies> 
 <Favorite_movie>Devchata</Favorite_movie>
 <favorite_series>Friends</favorite_series>
 <favorite_foods>baked_fish</favorite_foods>
@@ -130,12 +132,19 @@ git push
  35. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
 
  36. На веб интерфейсе модифицировать файл bug_report.xml, добавить баг репорт в формате XML.
+<?xml version="8.0" encoding="windows-1251"?>
 <bug_report>
-<ID>tutu</ID>
-<Title>goods</Title>
-<Steps_to_reproduction>1_Зайтина_сайт_2_Найти_товар_3_Добавить_в_корзину_4_Оплатить_товар</Steps_to_reproduction>
-<Expected_result>оплата_прошла_и_товар_получен</Expected_result>
-<Actual_result>оплата_прошла_и_товар_получен<Actual_result>
+<ID>1</ID>
+<Title>Оплата товара</Title>
+<Priority>high</Priority>
+<Severity>Major</Severity>
+<Environment>Samsung Gelaxy</Environment>
+<Steps_to_reproduction1>Зайтина_сайт</Steps_to_reproduction1>
+<Steps_to_reproduction2>Найти_товар</Steps_to_reproduction2>
+<Steps_to_reproduction3>Добавить_в_корзину</Steps_to_reproduction3>
+<Steps_to_reproduction4>Оплатить_товар</Steps_to_reproduction4>
+<Expected_result>оплата_прошла</Expected_result>
+<Actual_result>оплата_не_прошла<Actual_result>
 </bug_report>
  
 37. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
@@ -205,11 +214,14 @@ git push
 
 
 16.	На веб интерфейсе модифицировать файл bug_report.txt, добавить баг репорт в формате TXT.
-ID:tutu,
-Title:goods,
-Steps to reproduction: 1. Зайти на сайт 2. Найти товар 3. Добавить в корзину 4. Оплатить товар,
-Expected result: оплата прошла и товар получен,
-Actual result:оплата прошла и товар получен
+ID: 1,
+Title: "Оплата товара",
+Priority: high,
+Severity: Major,
+Environment: Samsung Gelaxy,
+ Steps: 1: "Зайти на сайт", 2: "Найти товар", 3: "Добавить в корзину", 4: "Оплатить товар",
+ Expected result: "оплата прошла",
+ Actual result:"оплата не прошла"
 
 17.	Сделать Commit changes (сохранить) изменения на веб интерфейсе.
 Add new bug report
